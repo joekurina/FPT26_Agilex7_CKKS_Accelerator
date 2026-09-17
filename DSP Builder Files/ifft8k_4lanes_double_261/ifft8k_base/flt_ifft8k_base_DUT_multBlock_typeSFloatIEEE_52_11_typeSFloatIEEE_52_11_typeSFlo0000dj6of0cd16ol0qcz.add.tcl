@@ -1,0 +1,4 @@
+# This is the Quartus file list for 'flt_ifft8k_base_DUT_multBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_typeSFlo0000of0cdj6of0cd16ol0qcz'
+
+set_global_assignment -name VHDL_FILE ./ifft8k_4lanes_double_261/ifft8k_base/ifft8k_base_DUT_safe_path.vhd 
+set_global_assignment -name VHDL_FILE ./ifft8k_4lanes_double_261/ifft8k_base/flt_ifft8k_base_DUT_multBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_typeSFlo0000of0cdj6of0cd16ol0qcz.vhd 

@@ -1,0 +1,96 @@
+
+<RTL_SPEC>
+
+  <FUNCTION module="the_nwc_8k_ntt_module" name="the_nwc_8k_ntt">
+    <ATTRIBUTES>
+      <IS_STALL_FREE value="no"/>
+      <IS_FIXED_LATENCY value="no"/>
+      <EXPECTED_LATENCY value="2048"/>
+      <CAPACITY value="4096"/>
+      <HAS_SIDE_EFFECTS value="yes"/>
+      <ALLOW_MERGING value="yes"/>
+    </ATTRIBUTES>
+    <INTERFACE>
+      <AVALON port="clock" type="clock"/>
+      <AVALON port="resetn" type="resetn"/>
+      <AVALON port="ivalid" type="ivalid"/>
+      <AVALON port="iready" type="iready"/>
+      <AVALON port="ovalid" type="ovalid"/>
+      <AVALON port="oready" type="oready"/>
+      <INPUT port="idata" width="272"/>
+      <OUTPUT port="odata" width="272"/>
+    </INTERFACE>
+    <REQUIREMENTS>
+      <FILE name="dspba_library_package.vhd"/>
+      <FILE name="dspba_library.vhd"/>
+      <FILE name="dspba_library_ver.sv"/>
+      <FILE name="dspba_sim_library_package.vhd"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_safe_path_flat_ver.sv"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_safe_path_flat.vhd"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut3_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut2_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut1_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_NWCTwi0000lti_Lut0_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut3_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut3_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut2_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut2_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut1_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le2_Lut1_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut3_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut2_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part5.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part4.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part3.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part2.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part1.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_Genera0000le1_Lut1_ROM_x_part0.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle4_Lut3_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle4_Lut2_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle4_Lut1_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle3_Lut3_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle3_Lut2_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT_reg_test_verifyNTT_multi_DUT_PNTT_Pipe_Multi_GeneralTwiddle3_Lut1_ROM_x.hex"/>
+      <FILE name="../reg_test_verifyNTT_multi/reg_test_verifyNTT_multi_DUT.sv"/>
+      <FILE name="the_nwc_8k_ntt_module.sv"/>
+    </REQUIREMENTS>
+    <RESOURCES>
+      <ALUTS value="31989"/>
+      <FFS value="33019"/>
+      <RAMS value="193"/>
+      <MLABS value="173"/>
+      <DSPS value="126"/>
+    </RESOURCES>
+  </FUNCTION>
+
+</RTL_SPEC>

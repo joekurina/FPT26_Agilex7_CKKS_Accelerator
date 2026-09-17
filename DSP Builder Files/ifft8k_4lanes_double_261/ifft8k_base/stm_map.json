@@ -1,0 +1,10 @@
+{
+    "map": {
+        "DUT/ChannelIn_vunroll_cunroll_x": "ifft8k_base_DUT_ChannelIn_vunroll_cunroll_x.stm",
+        "DUT/ChannelOut_vunroll_cunroll_x": "ifft8k_base_DUT_ChannelOut_vunroll_cunroll_x.stm"
+    },
+    "reverse_map": {
+        "ifft8k_base_DUT_ChannelIn_vunroll_cunroll_x.stm": "DUT/ChannelIn_vunroll_cunroll_x",
+        "ifft8k_base_DUT_ChannelOut_vunroll_cunroll_x.stm": "DUT/ChannelOut_vunroll_cunroll_x"
+    }
+}

@@ -1,0 +1,84 @@
+
+<RTL_SPEC>
+
+  <FUNCTION module="fhe_ifft_8k_4lanes_double_261_module" name="fhe_ifft_8k_4lanes_double_261">
+    <ATTRIBUTES>
+      <!--
+        This RTL does not have a fixed latency: it accumulates a full
+        frame (2048 beats) of input before starting computation, and
+        outputs a burst of 2048 consecutive valid beats once done, all
+        while a second frame's input may already be underway. With
+        IS_STALL_FREE="no" and IS_FIXED_LATENCY="no", the compiler relies
+        on the module's live ivalid/iready/ovalid/oready signals (now
+        properly implemented in the wrapper's internal FIFO + admission
+        control) rather than trusting a static latency number.
+        EXPECTED_LATENCY and CAPACITY below are just scheduling estimates
+        in this mode -- not functional guarantees -- but the spec still
+        requires values >= 1 to be present.
+      -->
+      <IS_STALL_FREE value="no"/>
+      <IS_FIXED_LATENCY value="no"/>
+      <EXPECTED_LATENCY value="2048"/>
+      <CAPACITY value="4096"/>
+      <HAS_SIDE_EFFECTS value="yes"/>
+      <ALLOW_MERGING value="yes"/>
+    </ATTRIBUTES>
+    <INTERFACE>
+      <AVALON port="clock" type="clock"/>
+      <AVALON port="resetn" type="resetn"/>
+      <AVALON port="ivalid" type="ivalid"/>
+      <AVALON port="iready" type="iready"/>
+      <AVALON port="ovalid" type="ovalid"/>
+      <AVALON port="oready" type="oready"/>
+      <INPUT port="idata" width="528"/>
+      <OUTPUT port="odata" width="528"/>
+    </INTERFACE>
+    <REQUIREMENTS>
+      <FILE name="dspba_library_package.vhd"/>
+      <FILE name="dspba_library.vhd"/>
+      <FILE name="dspba_library_ver.sv"/>
+      <FILE name="dspba_sim_library_package.vhd"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_safe_path_flat.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_constMultBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_1_30000cd06cj0of0cdj6or33z0.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_subBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_typeSFloa00000cdj6of0cd16ok0ct30u.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_multBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_typeSFlo0000of0cdj6of0cd16ol0qcz.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_addBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_typeSFloa0000j6of0cd16ok0cp06hj0u.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_castBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_castMode0000226123642i229742iyc5.vhd"/>
+      <FILE name="../ifft8k_base/flt_ifft8k_base_DUT_addSubFusedBlock_typeSFloatIEEE_52_11_4_correctRounding_38560000x0ao30cd06cj6ok0dpzc.vhd"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_3_real_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_3_imag_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_2_real_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_2_imag_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_1_real_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_1_imag_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_0_real_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_sw_in1_Lut_0_imag_x_lutmem.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut3_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut3_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut2_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut2_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut1_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle3_Lut1_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut3_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut3_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut2_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut2_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut1_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle2_Lut1_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle1_Lut3_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle1_Lut3_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle1_Lut1_ROM_real_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT_ifft8k_base_DUT_Hybrid_FFT_PFFT_GeneralTwiddle1_Lut1_ROM_imag_x.hex"/>
+      <FILE name="../ifft8k_base/ifft8k_base_DUT.vhd"/>
+      <FILE name="fhe_ifft_8k_4lanes_double_261_module.sv"/>
+    </REQUIREMENTS>
+    <RESOURCES>
+      <ALUTS value="308826"/>
+      <FFS value="261913"/>
+      <RAMS value="320"/>
+      <MLABS value="518"/>
+      <DSPS value="320"/>
+    </RESOURCES>
+  </FUNCTION>
+
+</RTL_SPEC>

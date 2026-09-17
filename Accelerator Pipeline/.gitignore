@@ -1,0 +1,20 @@
+# Build/install artifacts
+build/
+build-emu/
+build-sim/
+build-hw/
+build-report-*/
+build-kernel-tests-*/
+install/
+logs/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Editor/OS noise
+*.swp
+*~
+.DS_Store

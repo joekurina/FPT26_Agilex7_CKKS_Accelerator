@@ -1,0 +1,4 @@
+# This is the Quartus file list for 'flt_ifft8k_base_DUT_castBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_castMode0000226123642i229742iyc5'
+
+set_global_assignment -name VHDL_FILE ./ifft8k_4lanes_double_261/ifft8k_base/ifft8k_base_DUT_safe_path.vhd 
+set_global_assignment -name VHDL_FILE ./ifft8k_4lanes_double_261/ifft8k_base/flt_ifft8k_base_DUT_castBlock_typeSFloatIEEE_52_11_typeSFloatIEEE_52_11_castMode0000226123642i229742iyc5.vhd 
