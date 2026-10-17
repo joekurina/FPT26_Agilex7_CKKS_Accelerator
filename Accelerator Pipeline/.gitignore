@@ -1,20 +1,26 @@
-# Build/install artifacts
-build/
-build-emu/
-build-sim/
-build-hw/
-build-report-*/
-build-kernel-tests-*/
-install/
-logs/
-
-# CMake generated files
+# CMake build trees and generated configuration caches.
+/build*/
+/ckks_afu/build*/
 CMakeCache.txt
 CMakeFiles/
-cmake_install.cmake
-Makefile
 
-# Editor/OS noise
-*.swp
-*~
-.DS_Store
+# Bytecode caches from local Python tooling.
+__pycache__/
+*.pyc
+
+# FPGA images, Quartus databases, and project archives.
+*.gbs
+*.rbf
+*.sof
+*.jic
+*.qdb
+*.qar
+
+# Local licenses and environment settings
+*.lic
+.env
+.env.*
+
+# Locally generated benchmark key material
+secret-key.seal
+secret-key.compact

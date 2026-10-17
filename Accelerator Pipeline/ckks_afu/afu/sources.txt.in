@@ -1,0 +1,18 @@
+# Source-list template consumed by afu_synth_setup after CMake substitutes paths.
+# The descriptor supplies AFU identity and interface metadata.
+@CKKS_APP_ROOT@/afu/afu.json
+# Compile the shared transport package before the modules that import it.
+@CKKS_APP_ROOT@/afu/transport/copy_engine_pkg.sv
+# PIM entry point, native integration, control registers, and AHLS port binding.
+@CKKS_APP_ROOT@/afu/ofs_plat_afu.sv
+@CKKS_APP_ROOT@/afu/ckks_native_top.sv
+@CKKS_APP_ROOT@/afu/ckks_csr.sv
+@CKKS_APP_ROOT@/afu/ckks_frame_control_pipelined.sv
+@CKKS_APP_ROOT@/afu/ckks_pipeline_binding.sv
+# Host-memory packet sizing, DMA engines, and their counter helper.
+@CKKS_APP_ROOT@/afu/transport/ia840f_host_packet_cap.sv
+@CKKS_APP_ROOT@/afu/transport/copy_read_engine.sv
+@CKKS_APP_ROOT@/afu/transport/copy_write_engine_core.sv
+@CKKS_APP_ROOT@/afu/transport/counter_multicycle.sv
+# Generated arithmetic IP dependencies enter through the AHLS QIP.
+@CKKS_HLS_QIP@

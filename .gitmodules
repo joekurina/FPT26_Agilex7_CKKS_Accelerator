@@ -1,0 +1,9 @@
+[submodule "third_party/SEAL"]
+	path = Accelerator Pipeline/third_party/SEAL
+	url = https://github.com/microsoft/SEAL.git
+[submodule "third_party/SEAL-Embedded"]
+	path = Accelerator Pipeline/third_party/SEAL-Embedded
+	url = https://github.com/microsoft/SEAL-Embedded.git
+[submodule "third_party/opae-sdk"]
+	path = Accelerator Pipeline/third_party/opae-sdk
+	url = https://github.com/OPAE/opae-sdk.git

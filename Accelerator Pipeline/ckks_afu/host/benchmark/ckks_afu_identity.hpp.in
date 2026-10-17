@@ -1,0 +1,4 @@
+// CMake substitutes this host identity template from the selected build inputs.
+#pragma once
+// Enumeration and MMIO identity checks use the UUID from afu/afu.json.
+inline constexpr char CKKS_AFU_UUID[] = "@CKKS_AFU_UUID@";
